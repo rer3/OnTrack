@@ -6,6 +6,8 @@ The repository contains the OnTrack nutrition and fitness tracking application.
 
 - [Overview](#overview)
 - [Development](#development)
+  - [Application](#application)
+  - [Installer](#installer)
 - [Installation](#installation)
 - [Using OnTrack](#using-ontrack)
   - [Getting Started](#getting-started)
@@ -14,33 +16,34 @@ The repository contains the OnTrack nutrition and fitness tracking application.
 
 ## Overview
 
-OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It is tested for the Windows OS and is not yet available for macOS or Linux. The user interface has been optimized for 1920x1080 screen resolution. The OnTrack installer is available below under *Installation*. Screenshots and a brief tutorial are available below under *Using OnTrack*, and a thorough user guide is provided within the application. Application dependencies are PyInstaller 3.2.1, PyQt4 4.11.4, matplotlib 2.0.0, openpyxl 2.4.8, and ujson 1.35. Installer dependencies are PyInstaller 3.2.1, PyQt4 4.11.4, and winshell 0.6.
+OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It is tested for the Windows OS and is not yet available for macOS or Linux. The user interface has been optimized for 1920x1080 screen resolution. The OnTrack installer is available below under *Installation*. Screenshots and a brief tutorial are available below under *Using OnTrack*, and a thorough user guide is provided within the application.
 
 ## Development
 
-OnTrack was written in Python 2.7.11. Its user interface was built with PyQt4 4.11.4 bindings for Qt 4.8.7 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack installer executable file, were created with PyInstaller.
+OnTrack was written in Python 2.7.11. Its user interface was built with PyQt4 bindings for Qt 4.8.7 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack installer executable file, were created with PyInstaller 3.2.1. Application dependencies are: PyQt4 4.11.4, matplotlib 2.0.0, openpyxl 2.4.8, and ujson 1.35. Installer dependencies are: PyQt4 4.11.4 and winshell 0.6.
 
-#### Application
+### Application
 
-The application code
+Application code consists of nine modules, the PyInstaller specification file face.spec, and the ReferenceSource_MASTER folder which contains the app's executable file icon and initial food and exercise data.
 
-* ReferenceSource_MASTER
-  - apple.ico
-  - ExerciseDetails.json
-  - FoodDetails.json
-  - FoodNutrients.json
-* \_\_init\_\_.py, album.py, 
-* album.py
-* body.py
-* brain.py
-* dna.py
-* ears.py
-* eyes.py
-* face.py
-* face.spec
-* organs.py
+File | Description
+--- | ---
+*\_\_init\_\_.py* | Blank init file
+*album.py* | Resource data for app icons sourced from Google Material Icons under Apache License v2.0
+*body.py* | Classes to manage and analyze nutrition and fitness data
+*brain.py* | Classes to manage local application and user data files
+*dna.py* | Constants used by application modules
+*ears.py* | Classes to prompt the user for data inputs
+*eyes.py* | Functions to analyze user data and classes to plot graphs
+*face.py* | Application user interface and the main function
+*organs.py* | Custom PyQt4 class wrappers and helper functions used by application modules
+*face.spec* | PyInstaller specification file for the application
+*apple.ico* | Apple icon sourced from freeiconshop.con under a free use license
+*ExerciseDetails.json* | Initial exercise reference data, original for this application, includes exercise details
+*FoodDetails.json* | Initial food reference data, sourced from the USDA National Nutrient Database for Standard Reference (Release 28), includes food details
+*FoodNutrients.json* | Initial food reference data, sourced from the USDA NNDSR, includes food nutrient content
 
-#### Installer
+### Installer
 
 * \_\_init\_\_.py
 * apple.ico
@@ -66,8 +69,9 @@ The OnTrack_Installer.exe file is in the resulting dist folder.
 You can download the OnTrack installer by clicking the link below.
 * [Click here to download the installer](https://dl.dropbox.com/s/x4cdfy4k7sxl0af/OnTrack_Installer.exe?dl=0 "Download OnTrack_Installer.exe")
 
-The installer contains the zipped OnTrack application folder. To "install" OnTrack, it simply unzips this folder into your selected directory and creates a desktop shortcut to the app's executable file 'OnT.exe'. The installer size is 60 MB. The OnTrack app initially requres 100 MB of free space. Each OnTrack user typically generates between 5-10 MB of additional data. Your antivirus software might flag the installer since it is an unknown executable file without a digital signature. If you prefer, you can download the zipped application folder by clicking the link below. Remember that the file 'OnT.exe' launches the application.
+The installer contains the zipped OnTrack application folder. To "install" OnTrack, it simply unzips this folder into your selected directory and creates a desktop shortcut to the app's executable file 'OnT.exe'. The installer size is 60 MB. The OnTrack app initially requres 100 MB of free space. Each OnTrack user typically generates between 5-10 MB of additional data. Your antivirus software might flag the installer since it is an unknown executable file without a digital signature.
 
+If you prefer, you can download the zipped application folder by clicking the link below. Remember that the file 'OnT.exe' launches the application.
 * [Click here to download the zipped app folder](https://dl.dropbox.com/s/i8rxwsm4dgcfxi9/OnTrack_zipped.zip?dl=0 "Download OnTrack_zipped.zip")
 
 ## Using OnTrack
