@@ -5,6 +5,7 @@ The repository contains the OnTrack nutrition and fitness tracking application.
 ## Table of Contents
 
 - [Overview](#overview)
+- [Development](#development)
 - [Installation](#installation)
 - [Using OnTrack](#using-ontrack)
   - [Getting Started](#getting-started)
@@ -13,14 +14,57 @@ The repository contains the OnTrack nutrition and fitness tracking application.
 
 ## Overview
 
-OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It was written in Python 2.7.11. Its user interface was built with the PyQt4 bindings for Qt v4 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack Installer executable, were created with PyInstaller. OnTrack is tested for the Windows OS and is not yet available for macOS or Linux.
+OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It was written in Python 2.7.11. Its user interface was built with the PyQt4 bindings for Qt v4 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack Installer executable file, were created with PyInstaller. OnTrack is tested for the Windows OS and is not yet available for macOS or Linux. The user interface has been optimized for 1920x1080 screen resolution.
+
+## Development
+
+#### Application
+
+* ReferenceSource_MASTER
+  - apple.ico
+  - ExerciseDetails.json
+  - FoodDetails.json
+  - FoodNutrients.json
+* __init__.py
+* album.py
+* body.py
+* brain.py
+* dna.py
+* ears.py
+* eyes.py
+* face.py
+* face.spec
+* organs.py
+
+#### Installer
+
+* __init__.py
+* apple.ico
+* icons.py
+* installer.py
+* installer.spec
+* OnTrack_zipped.zip (must be created by PyInstaller)
+
+The .spec files used to create the application folder and Installer executable file are included in this repository. The pathex and icon parameters in each file must be changed to the path to all application files and the path to the apple icon, respectively. Open the command prompt and activate your virtual environment. Navigate to your application code directory and execute:
+```
+pyinstaller face.spec
+```
+
+Zip the OnTrack folder in the resulting dist folder and move it to the installer code directory. Activate the installer's virtual environment (if applicable), navigate to the installer code directory, and execute:
+```
+pyinstaller installer.spec
+```
+
+The OnTrack_Installer.exe file is in the resulting dist folder.
 
 ## Installation
 
 You can download the OnTrack installer by clicking the link below.
-* [Click here to download the installer](https://dl.dropbox.com/s/x4cdfy4k7sxl0af/OnTrack_Installer.exe?dl=0 "Click")
+* [Click here to download the installer](https://dl.dropbox.com/s/x4cdfy4k7sxl0af/OnTrack_Installer.exe?dl=0 "Download OnTrack_Installer.exe")
 
-The installer contains the zipped OnTrack application folder. To "install" OnTrack, it simply unzips this folder into your selected directory and creates a desktop shortcut to the app's executable file 'OnT.exe'. The installer size is 60 MB. The OnTrack app initially requres 100 MB of free space. Each OnTrack user typically generates between 5-10 MB of additional data. Your antivirus software might flag the installer since it is an unknown executable file without a digital signature.
+The installer contains the zipped OnTrack application folder. To "install" OnTrack, it simply unzips this folder into your selected directory and creates a desktop shortcut to the app's executable file 'OnT.exe'. The installer size is 60 MB. The OnTrack app initially requres 100 MB of free space. Each OnTrack user typically generates between 5-10 MB of additional data. Your antivirus software might flag the installer since it is an unknown executable file without a digital signature. If you prefer, you can download the zipped application folder by clicking the link below. Remember that the file 'OnT.exe' launches the application.
+
+* [Click here to download the zipped app folder](https://dl.dropbox.com/s/i8rxwsm4dgcfxi9/OnTrack_zipped.zip?dl=0 "Download OnTrack_zipped.zip")
 
 ## Using OnTrack
 

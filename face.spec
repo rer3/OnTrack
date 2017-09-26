@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['face.py'],
-             pathex=['E:\\42\\Dev\\QA\\OnT_QA\\OnT_Files'],
+             pathex=['PATH\\TO\\APPLICATION\\FILES'],
              binaries=[],
              datas=[("ReferenceSource_MASTER/*.json", "ReferenceSource"), ("ReferenceSource_MASTER/apple.ico", "ReferenceSource")],
              hiddenimports=[],
@@ -24,7 +24,7 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           console=False, 
-          icon='e:\\42\\dev\\qa\\ont_qa\\ont_files\\referencesource_master\\apple.ico')
+          icon='PATH\\TO\\APPLE\\ICON\\apple.ico')
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,

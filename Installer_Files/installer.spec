@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['e:\\42\\dev\\qa\\ont_installer\\installer.py'],
-             pathex=['E:\\42\\Dev\\QA\\OnT_Installer'],
+a = Analysis(['installer.py'],
+             pathex=['PATH\\TO\\INSTALLER\\FILES'],
              binaries=[],
              datas=[("OnTrack_zipped.zip", ".")],
              hiddenimports=[],
@@ -26,4 +26,4 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           console=False, 
-          icon='e:\\42\\dev\\qa\\ont_installer\\apple.ico')
+          icon='PATH\\TO\\APPLE\\ICON\\apple.ico')
