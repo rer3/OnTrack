@@ -14,18 +14,22 @@ The repository contains the OnTrack nutrition and fitness tracking application.
 
 ## Overview
 
-OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It was written in Python 2.7.11. Its user interface was built with the PyQt4 bindings for Qt v4 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack Installer executable file, were created with PyInstaller. OnTrack is tested for the Windows OS and is not yet available for macOS or Linux. The user interface has been optimized for 1920x1080 screen resolution.
+OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It is tested for the Windows OS and is not yet available for macOS or Linux. The user interface has been optimized for 1920x1080 screen resolution. The OnTrack installer is available below under *Installation*. Screenshots and a brief tutorial are available below under *Using OnTrack*, and a thorough user guide is provided within the application. Application dependencies are PyInstaller 3.2.1, PyQt4 4.11.4, matplotlib 2.0.0, openpyxl 2.4.8, and ujson 1.35. Installer dependencies are PyInstaller 3.2.1, PyQt4 4.11.4, and winshell 0.6.
 
 ## Development
 
+OnTrack was written in Python 2.7.11. Its user interface was built with PyQt4 4.11.4 bindings for Qt 4.8.7 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack installer executable file, were created with PyInstaller.
+
 #### Application
+
+The application code
 
 * ReferenceSource_MASTER
   - apple.ico
   - ExerciseDetails.json
   - FoodDetails.json
   - FoodNutrients.json
-* __init__.py
+* \_\_init\_\_.py, album.py, 
 * album.py
 * body.py
 * brain.py
@@ -38,7 +42,7 @@ OnTrack is an open-source desktop application for tracking nutrition and fitness
 
 #### Installer
 
-* __init__.py
+* \_\_init\_\_.py
 * apple.ico
 * icons.py
 * installer.py

@@ -66,11 +66,11 @@ import json
 import os
 import shutil
 import sys
-import ujson
 import urllib2
 
 from PyQt4 import QtCore
 from PyQt4 import QtGui
+import ujson
 
 import dna
 import body

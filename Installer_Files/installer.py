@@ -26,11 +26,11 @@ Module Components
 
 import os
 import sys
-import winshell
 import zipfile
 
 from PyQt4 import QtCore
 from PyQt4 import QtGui
+import winshell
 
 import icons
 

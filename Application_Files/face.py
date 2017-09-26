@@ -77,12 +77,12 @@ import datetime
 import json
 import os
 import sys
-import ujson
 
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 from PyQt4 import QtCore
 from PyQt4 import QtGui
+import ujson
 
 import body
 import brain
