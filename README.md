@@ -17,63 +17,62 @@ The repository contains the OnTrack nutrition and fitness tracking application.
 
 ## Overview
 
-OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It is tested for the Windows OS and is not yet available for macOS or Linux. The user interface has been optimized for 1920x1080 screen resolution. The OnTrack installer is available below under *Installation*. Screenshots and a brief tutorial are available below under *Using OnTrack*, and a thorough user guide is provided within the application.
+OnTrack is an open-source desktop application for tracking nutrition and fitness routines. It is tested for the Windows OS and is not yet available for macOS or Linux. The user interface has been optimized for 1920x1080 screen resolution. The OnTrack installer is available below under *Installation*. Screenshots and a brief tutorial are available below under **Using OnTrack**, and a thorough user guide is provided within the application.
 
 ## Development
 
-OnTrack was written in Python 2.7.11. Its user interface was built with PyQt4 bindings for Qt 4.8.7 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack installer executable file, were created with PyInstaller 3.2.1. Application dependencies are: PyQt4 4.11.4, matplotlib 2.0.0, openpyxl 2.4.8, and ujson 1.35. Installer dependencies are: PyQt4 4.11.4 and winshell 0.6.
+OnTrack was written in Python 2.7.11. Its user interface uses PyQt4 bindings for Qt 4.8.7 under a GPLv3 license. The OnTrack application folder (containing the application and all dependencies), as well as the OnTrack installer executable file, were created with PyInstaller 3.2.1. Application dependencies are PyQt4 4.11.4, matplotlib 2.0.0, openpyxl 2.4.8, and ujson 1.35. Installer dependencies are PyQt4 4.11.4 and winshell 0.6.
 
 ### Application
 
-Application code consists of nine modules, the PyInstaller specification file, and the ReferenceSource_MASTER folder which contains the app's executable file icon and initial food and exercise reference data. PyInstaller was used to bundle these files and create a one-folder app.
+Application code consists of nine modules, the PyInstaller specification file, and the ReferenceSource_MASTER folder which contains the app's executable file icon and initial food and exercise reference data. PyInstaller was used to bundle these OnTrack application files and create a one-folder app.
 
 File | Description
 --- | ---
 *\_\_init\_\_.py* | Blank init file
-*album.py* | Resource data for app icons sourced from Google Material Icons under Apache License v2.0
+*album.py* | Resource data for app icons sourced from Google Material Icons and used under an Apache License v2.0
 *body.py* | Classes to manage and analyze nutrition and fitness data entered by the user
-*brain.py* | Classes to manage local data files created and modify by the application
+*brain.py* | Classes to manage local data files created and modified by the application
 *dna.py* | Constants referenced by application modules
 *ears.py* | Classes to prompt the user for data inputs
 *eyes.py* | Functions to analyze and clean user data and classes to plot graphs of the cleaned data
 *face.py* | Application user interface and the main function
 *organs.py* | Custom PyQt4 class wrappers and helper functions used by application modules
 *face.spec* | PyInstaller specification file for the application
-*apple.ico* | Apple icon for OnT.exe, sourced from freeiconshop.com under a free use license
+*apple.ico* | OnT.exe icon sourced from freeiconshop.com and used under a free use license
 *ExerciseDetails.json* | Initial exercise reference data, original for this application, includes exercise details
 *FoodDetails.json* | Initial food reference data, sourced from the USDA National Nutrient Database for Standard Reference (NDSR) Release 28, includes food details
 *FoodNutrients.json* | Initial food reference data, sourced from the USDA NDSR, includes food nutrient content
 
 ### Installer
 
-Installer code consists of three modules, the PyInstaller specification file, the installer's executable file icon, and the zipped OnTrack application folder created by PyInstaller which contains the application and all dependencies. The zipped OnTrack application folder is not included in this repository, but it can be downloaded at the applicable link below under *Installation*. PyInstaller was used to bundle these files and create a one-file app.
+Installer code consists of three modules, the PyInstaller specification file, the installer's executable file icon, and the zipped OnTrack application folder, created by PyInstaller, which contains the application and all dependencies. The zipped OnTrack application folder is not included in this repository, but it can be downloaded at the applicable link below under **Installation**. PyInstaller was used to bundle these OnTrack installer files and create a one-file app.
 
 File | Description
 --- | ---
 *\_\_init\_\_.py* | Blank init file
-*icons.py* | Resource data for installer taskbar icon apple.ico
+*icons.py* | Resource data for installer icon *apple.ico*
 *installer.py* | Installer user interface and the main function
 *installer.spec* | PyInstaller specification file for the installer
-*apple.ico* | Apple icon for OnTrack_Installer.exe, sourced from freeiconshop.con under a free use license
+*apple.ico* | OnTrack_Installer.exe icon sourced from freeiconshop.com and used under a free use license
 *OnTrack_zipped.zip* | Zipped OnTrack application folder created by PyInstaller -- **not included in this repository**
 
 ### Replicating OnTrack
 
 The OnTrack application can be replicated by following the directions below.
-1. Save all application files and move them to the same folder.
+1. Save all application files to the same folder on your hard drive.
 2. Create a folder in this directory called 'ReferenceSource_MASTER' and save the four applicable files to it.
-3. Change the pathex and icon parameters in face.spec to the correct paths on your hard drive.
-4. Install all dependencies (and their dependencies) into a virtual environment.
+3. Change the ```pathex``` and ```icon``` parameters in face.spec to the correct paths on your hard drive.
+4. Install all dependencies into a virtual environment.
 5. Open the command prompt, activate your virtual environment, and navigate to your application code directory.
 6. Execute ```pyinstaller face.spec``` to create the application distribution folder.
-7. Zip the OnTrack folder located in the dist folder. Alternately, save the zipped OnTrack application folder from the link found below under *Installation*
-8. Save all installer files and move them to the same folder.
-9. Move the zipped OnTrack application folder into that directory.
-10. Change the pathex and icon parameters in installer.spec to the correct paths on your hard drive.
+7. Zip the OnTrack folder located in the dist folder. Alternately, save the zipped OnTrack application folder from the link found below under *Installation*. The folder must be called 'OnTrack_zipped', otherwise the ```datas``` parameter in *installer.spec* must be changed.
+8. Save all installer files to the same folder on your hard drive and move the zipped OnTrack folder into that directory.
+10. Change the ```pathex``` and ```icon``` parameters in *installer.spec* to the correct paths on your hard drive.
 11. Change virtual environments if applicable and install all dependencies.
 12. Navigate to your installer code directory.
 13. Execute ```pyinstaller installer.spec``` to create the installer distribution folder.
-14. Open the OnTrack_Installer.exe file in the dist folder.
+14. Open the 'OnTrack_Installer.exe' file in the dist folder.
 
 ## Installation
 
@@ -89,15 +88,15 @@ If you prefer, you can download the zipped application folder by clicking the li
 
 ### Getting Started
 
-Once OnTrack is installed on your computer, click the shortcut on your desktop to open the application. On the Home page, you will find the Main Menu at the top, a Login Menu at the center, and a Settings button beneath the Login Menu. Create your username, select it from the drop-down list of active users, and log in.
+Once OnTrack is installed on your computer, click the shortcut on your desktop to open the application. On the Home page, you will find the Main Menu at the top, a Login Menu at the center, and a Settings button. Enter your username under **New User** and click *Create User*. Then select the username from the drop-down list of **Active Users** and click *Login User*. All app users start out with the same food and exercise reference inventories.
 
 [![Home][Home]][Home]
 
-Click the 'Guide' button in the Main Menu to access OnTrack's user guide and glossary. You can give each resource a thorough read, or just dive right into tinkering with the tools on the Profile and Builder pages.
+Click the *Guide* button in the Main Menu to access OnTrack's user guide and glossary. Give each resource a thorough read, or just dive right into tinkering with the tools on the Profile and Builder pages.
 
 [![Guide][Guide]][Guide]
 
-Change application behavior by clicking the Settings button.
+Change application behavior by clicking *Settings*. 
 
 [![Settings][Settings]][Settings]
 
