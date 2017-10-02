@@ -2610,7 +2610,7 @@ class MainWindow(QtGui.QMainWindow):
         # Case where item is in Build Parent.
         if inbp:
             QtGui.QMessageBox.warning(
-                self, "Cannot Delete Item", "This " + name + " is currently " +
+                self, "Cannot Delete Item", "This " + reftype + " is currently " +
                 "being used in your build! It cannot be deleted.")
             return
         # Case where item is in any records and/or templates.

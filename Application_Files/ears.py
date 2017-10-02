@@ -1836,10 +1836,12 @@ class InputFood(organs.EasyDialog):
                 if unit == "% DV":
                     rdv_val = dna.FDA_RDV[nid][0]
                     value = (value / 100.0) * rdv_val
-            # Eval value times multiplier.
-            final_value = organs.numeric_value(value * multiplier)
+            # Eval value times multiplier. Round to four decimal places so that
+            # recalculation from stored value back to serving size value yields
+            # the same result (which is rounded to only 3 decimal places).
+            final_value = organs.numeric_value(value * multiplier, True, 4)
             # Check for value less than zero and remove it from cell.
-            if final_value <= 0:
+            if round(final_value, 3) <= 0:
                 QtGui.QMessageBox.warning(
                     self, "Invalid Nutrient Value", "The nutrient value " +
                     "was calculated to be less than zero! Final values are " +
