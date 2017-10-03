@@ -79,12 +79,12 @@ The OnTrack application can be replicated by following the directions below.
 ## Installation
 
 You can download the OnTrack installer by clicking the link below.
-* [Click here to download the installer](https://dl.dropbox.com/s/x4cdfy4k7sxl0af/OnTrack_Installer.exe?dl=0 "Download OnTrack_Installer.exe")
+* [Click here to download the installer](https://dl.dropbox.com/s/myqikw8q66iz5ar/OnTrack_Installer.exe?dl=0 "Download OnTrack_Installer.exe")
 
 The installer contains the zipped OnTrack application folder. To "install" OnTrack, it simply unzips this folder into your selected directory and creates a desktop shortcut to the app's executable file 'OnT.exe'. The installer size is 60 MB. The OnTrack app initially requires 100 MB of free space. Each OnTrack user typically generates between 5-10 MB of additional data. Your antivirus software might flag the installer since it is an unknown executable file without a digital signature.
 
 If you prefer, you can download the zipped application folder by clicking the link below. Unzip it into your directory of choice and open the file 'OnT.exe' to launch the application.
-* [Click here to download the zipped app folder](https://dl.dropbox.com/s/i8rxwsm4dgcfxi9/OnTrack_zipped.zip?dl=0 "Download OnTrack_zipped.zip")
+* [Click here to download the zipped app folder](https://dl.dropbox.com/s/ia10lmxix924qto/OnTrack_zipped.zip?dl=0 "Download OnTrack_zipped.zip")
 
 ## Using OnTrack
 
